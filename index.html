@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="submain">
+            <h2>Create an Account</h2>
+            <h1>Sign Up</h1>
+            <div class="email">
+                <form id="signupForm" action="">
+                    <input id="email" type="text" placeholder="Email Address" required>
+                </form>
+            </div>
+            <div class="pass">
+                <form id="signupForm" action="">
+                    <input id="password" type="password" placeholder="Password" required>
+                </form>
+            </div>
+            <button onclick="validateForm()">Sign Up</button>
+            <div class="remember">
+                <form action="">
+                    <div class="one">
+                        <label for="">Remember Me</label>
+                        <input type="checkbox">
+                    </div> 
+                    <div class="two">
+                        <label for=""><a href="#">Forget Password</a></label>
+                    </div>    
+                    </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            
+            if (email == "" || password == "") {
+                alert("Please Fill In All Fields.");
+                return false;
+            }
+
+            if (!isValidEmail(email)) {
+                alert("Please Enter a Valid Email Address.");
+                return false;
+            }
+
+            alert("Sign Up Successful!");
+            document.getElementById("signupForm").reset();
+            document.getElementById("password").value = "";
+        }
+
+        function isValidEmail(email) {
+            return /\S+@\S+\.\S+/.test(email);
+        }
+    </script>
+</body>
+</html>
