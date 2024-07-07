@@ -5,3 +5,8 @@ simple sign-up page with two fields: email and password. The page includes input
 # Features
 - Email and Password Fields: Basic form fields for user registration.
 - Input Validation: Real-time validation to ensure correct email format and secure password criteria.
+
+# Technologies Used
+- HTML: Structure and content of the sign-up page.
+- CSS: Styling and layout for a visually appealing design.
+- JavaScript: Client-side validation for form inputs.
